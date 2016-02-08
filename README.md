@@ -7,6 +7,7 @@ Phần mềm có sử dụng:
 -	Hình ảnh / icon: xin cảm ơn artist Webalys, GraphicLoads, website IconArchive,...
 -	Cảm ơn các tác giả đã tạo ra UDF: SSCtrlHover của binhnx, GUIRichLabel của MrCreatoR, Icons của Yashied, StringSize của Melba23.
 -	Câu hỏi, đáp án cùng một số hình ảnh liên quan được tham khảo từ các tài liệu ôn thi bằng lái xe hạng A1
+
 # MÃ NGUỒN
 Mã nguồn không bao gồm một số chức năng như: poster, banner tuyên truyền, quảng cáo và tính năng check update, like,...
 
