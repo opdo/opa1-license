@@ -1,0 +1,194 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+
+Global $GUI_About = GUICreate("Giới thiệu",436,308,-1,-1,$WS_POPUP,BitOr($WS_EX_TOPMOST,$WS_EX_TOOLWINDOW))
+GUISetBkColor(0x0063B1,$GUI_About)
+Global $update_download = GUICtrlCreateLabel("h",50,200,332,26,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Update_Download")
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlSetCursor(-1,0)
+Global $tip_NoAskAgain = GUICtrlCreateLabel("☐ Không hỏi lại điều này",50,226,332,26,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Update_DontAskAgain")
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlSetCursor(-1,0)
+Global $about_text = GUICtrlCreateLabel("",31,82,372,114,$SS_CENTER,-1)
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+Global $about_close = GUICtrlCreateLabel("Đóng",180,256,79,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_About_HideGUI")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $about_logo = GUICtrlCreatePic("",190,10,60,60,-1,-1)
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=Giới thiệu
+breite=436
+hoehe=308
+style=$WS_POPUP
+exstyle=$WS_EX_TOPMOST+$WS_EX_TOOLWINDOW
+bgcolour=0x0063B1
+bgimage=none
+handle=GUI_About
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x00042508]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=180
+y=256
+width=79
+height=34
+text=Đóng
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=about_close
+func=_About_HideGUI
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=10
+[0x00042510]
+handle=357
+locked=0
+resize=
+code=
+type=image
+x=190
+y=10
+width=60
+height=60
+tooltip=
+text=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=about_logo
+func=
+bgimage=
+order=10
+tabpage=-1
+iconindex=
+textmode=text
+[0x00032500]
+handle=358
+locked=0
+resize=
+code=
+type=label
+x=31
+y=82
+width=372
+height=114
+text=
+tooltip=
+state=
+style=$SS_CENTER
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=about_text
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=10
+[0x000923BE]
+handle=359
+locked=0
+resize=
+code=GUICtrlSetCursor(-1,0)
+type=label
+x=50
+y=226
+width=332
+height=26
+text=☐ Không hỏi lại điều này
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=tip_NoAskAgain
+func=_Update_DontAskAgain
+bgimage=
+order=10
+tabpage=-1
+iconindex=
+textmode=text
+[0x000324DE]
+handle=360
+locked=0
+resize=
+code=GUICtrlSetCursor(-1,0)
+type=label
+x=50
+y=200
+width=332
+height=26
+text=h
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=update_download
+func=_Update_Download
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=5
+#ce

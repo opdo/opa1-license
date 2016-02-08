@@ -1,0 +1,480 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+#include <EditConstants.au3>
+
+Global $GUI_Learn = GUICreate("Học lý thuyết trắc nghiệm",800,620,-1,-1,BitOr($WS_POPUP,$WS_BORDER),-1)
+GUISetBkColor(0xFFFFFF,$GUI_Learn)
+GUICtrlCreateLabel("",0,0,807,85,-1,$GUI_WS_EX_PARENTDRAG)
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("Học lý thuyết trắc nghiệm",40,10,442,56,-1,-1)
+GUICtrlSetFont(-1,22,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+Global $learn_Textprocess = GUICtrlCreateLabel("Bạn đã học được 150 câu. Thời gian học: 54 phút",40,54,442,21,-1,-1)
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+Global $learnText_number = GUICtrlCreateLabel("CÂU 1",40,112,110,44,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetFont(-1,18,900,0,"Segoe UI Black")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $learnText_cauhoi = GUICtrlCreateLabel("sdas",180,112,572,98,-1,-1)
+GUICtrlSetFont(-1,12,600,0,"Segoe UI Semibold")
+GUICtrlCreateLabel("",0,519,801,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetState(-1,BitOr($GUI_SHOW,$GUI_DISABLE))
+GUICtrlSetFont(-1,15,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0xC0C0C0")
+Global $learnButton_pre = GUICtrlCreateLabel("◀",278,519,73,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_learn_Pre")
+GUICtrlSetFont(-1,15,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $learn_input = GUICtrlCreateInput("150",353,525,33,24,BitOr($ES_NUMBER,$ES_RIGHT),0)
+GUICtrlSetOnEvent(-1,"_learn_Load")
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetBkColor(-1,"0xC0C0C0")
+GUICtrlCreateLabel("/ 150",386,525,39,21,-1,-1)
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetBkColor(-1,"-2")
+Global $learnButton_help = GUICtrlCreateLabel("Hướng dẫn",608,519,85,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Tip_1")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $learnButton_next = GUICtrlCreateLabel("▶",433,519,70,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_learn_Next")
+GUICtrlSetFont(-1,15,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $learnButton_meo = GUICtrlCreateLabel("Xem mẹo",40,166,110,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $learn_tiphidden = GUICtrlCreateLabel("sdas",20,460,230,39,-1,-1)
+GUICtrlSetState(-1,$GUI_HIDE)
+GUICtrlSetFont(-1,12,600,0,"Segoe UI Semibold")
+Global $learnButton_exit = GUICtrlCreateLabel("Trở về",702,519,85,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_HideGUI_Learn")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=Học lý thuyết trắc nghiệm
+breite=800
+hoehe=620
+style=$WS_POPUP+$WS_BORDER
+exstyle=-1
+bgcolour=0xFFFFFF
+bgimage=none
+handle=GUI_Learn
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x00051CA4]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=0
+y=0
+width=807
+height=85
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=$GUI_WS_EX_PARENTDRAG
+textcolour=0x000000
+bgcolour=0x0063B1
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+order=0
+tabpage=-1
+iconindex=
+textmode=text
+[0x00051C9A]
+handle=357
+locked=0
+resize=
+code=
+type=label
+x=40
+y=10
+width=442
+height=56
+text=Học lý thuyết trắc nghiệm
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semibold
+fontsize=22
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+order=2
+tabpage=-1
+iconindex=
+textmode=text
+[0x00081C90]
+handle=358
+locked=0
+resize=
+code=
+type=label
+x=40
+y=54
+width=442
+height=21
+text=Bạn đã học được 150 câu. Thời gian học: 54 phút
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=learn_Textprocess
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=3
+[0x001D1C7A]
+handle=360
+locked=0
+resize=
+code=
+type=label
+x=40
+y=112
+width=110
+height=44
+text=CÂU 1
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Black
+fontsize=18
+fontstyle=900
+fontattribute=0
+id=learnText_number
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=5
+[0x000D1C72]
+handle=361
+locked=0
+resize=
+code=
+type=label
+x=180
+y=112
+width=572
+height=98
+text=sdas
+tooltip=
+state=
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=Segoe UI Semibold
+fontsize=12
+fontstyle=600
+fontattribute=0
+id=learnText_cauhoi
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=6
+[0x00091C6A]
+handle=362
+locked=0
+resize=
+code=
+type=label
+x=0
+y=519
+width=801
+height=34
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_DISABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0xC0C0C0
+font=Segoe UI Semibold
+fontsize=15
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=7
+[0x000C1C62]
+handle=363
+locked=0
+resize=
+code=
+type=label
+x=278
+y=519
+width=73
+height=34
+text=◀
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semibold
+fontsize=15
+fontstyle=600
+fontattribute=0
+id=learnButton_pre
+func=_learn_Pre
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=8
+[0x00121C5C]
+handle=364
+locked=0
+resize=
+code=
+type=input
+x=353
+y=525
+width=33
+height=24
+text=150
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$ES_NUMBER+$ES_RIGHT
+exstyle=0
+textcolour=0x000000
+bgcolour=0xC0C0C0
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=learn_input
+func=_learn_Load
+bgimage=
+order=9
+tabpage=-1
+iconindex=
+textmode=text
+[0x00111C54]
+handle=365
+locked=0
+resize=
+code=
+type=label
+x=386
+y=525
+width=39
+height=21
+text=/ 150
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=10
+[0x001C1C4C]
+handle=366
+locked=0
+resize=
+code=
+type=label
+x=702
+y=519
+width=85
+height=34
+text=Trở về
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=learnButton_exit
+func=_HideGUI_Learn
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=16
+[0x000D1C40]
+handle=367
+locked=0
+resize=
+code=
+type=label
+x=608
+y=519
+width=85
+height=34
+text=Hướng dẫn
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=learnButton_help
+func=_Tip_1
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=12
+[0x000D1894]
+handle=368
+locked=0
+resize=
+code=
+type=label
+x=433
+y=519
+width=70
+height=34
+text=▶
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semibold
+fontsize=15
+fontstyle=600
+fontattribute=0
+id=learnButton_next
+func=_learn_Next
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=13
+[0x0008222C]
+handle=369
+locked=0
+resize=
+code=
+type=label
+x=40
+y=166
+width=110
+height=34
+text=Xem mẹo
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=learnButton_meo
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=14
+[0x00072262]
+handle=370
+locked=0
+resize=
+code=
+type=label
+x=20
+y=460
+width=230
+height=39
+text=sdas
+tooltip=
+state=$GUI_HIDE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=Segoe UI Semibold
+fontsize=12
+fontstyle=600
+fontattribute=0
+id=learn_tiphidden
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=15
+#ce

@@ -1,0 +1,319 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+
+Global $GUI_Thi_Done = GUICreate("Kết quả thi thử",400,233,-1,-1,BitOr($WS_POPUP,$WS_BORDER),-1)
+GUISetBkColor(0x0063B1,$GUI_Thi_Done)
+GUICtrlCreateLabel("",0,0,406,61,-1,$GUI_WS_EX_PARENTDRAG)
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $thi_doneButton_close = GUICtrlCreateLabel("Đóng",170,190,62,32,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_KetQua_HideGUI")
+GUICtrlSetFont(-1,11,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("Kết quả thi thử",13,0,244,54,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,20,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("Số câu đúng:",44,77,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0x0063B1")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+GUICtrlCreateLabel("Số câu sai:",44,110,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0x0063B1")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+GUICtrlCreateLabel("Kết quả:",44,143,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0x0063B1")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+Global $thi_doneText_3 = GUICtrlCreateLabel("KHÔNG ĐẠT",203,143,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFF0000")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+Global $thi_doneText_2 = GUICtrlCreateLabel("13",203,110,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0x0063B1")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+Global $thi_doneText_1 = GUICtrlCreateLabel("18",203,77,158,32,$SS_CENTERIMAGE,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0x0063B1")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=Kết quả thi thử
+breite=400
+hoehe=233
+style=$WS_POPUP+$WS_BORDER
+exstyle=-1
+bgcolour=0x0063B1
+bgimage=none
+handle=GUI_Thi_Done
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x00111AD4]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=0
+y=0
+width=406
+height=61
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=$GUI_WS_EX_PARENTDRAG
+textcolour=0x000000
+bgcolour=0x0063B1
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+order=0
+tabpage=-1
+iconindex=
+textmode=text
+[0x00091600]
+handle=357
+locked=0
+resize=
+code=
+type=label
+x=170
+y=190
+width=62
+height=32
+text=Đóng
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=11
+fontstyle=350
+fontattribute=0
+id=thi_doneButton_close
+func=_KetQua_HideGUI
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=2
+[0x00151ADC]
+handle=358
+locked=0
+resize=
+code=
+type=label
+x=13
+y=0
+width=244
+height=54
+text=Kết quả thi thử
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=20
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=3
+[0x00091A8E]
+handle=359
+locked=0
+resize=
+code=
+type=label
+x=44
+y=77
+width=158
+height=32
+text=Số câu đúng:
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0x0063B1
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=4
+[0x000A1AAE]
+handle=360
+locked=0
+resize=
+code=
+type=label
+x=44
+y=110
+width=158
+height=32
+text=  Số câu sai:
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0x0063B1
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=5
+[0x000522E6]
+handle=361
+locked=0
+resize=
+code=
+type=label
+x=44
+y=143
+width=158
+height=32
+text=  Kết quả:
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0x0063B1
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=6
+[0x000820E4]
+handle=362
+locked=0
+resize=
+code=
+type=label
+x=203
+y=143
+width=158
+height=32
+text=KHÔNG ĐẠT
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFF0000
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=thi_doneText_3
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=7
+[0x00081D80]
+handle=363
+locked=0
+resize=
+code=
+type=label
+x=203
+y=110
+width=158
+height=32
+text=13
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0x0063B1
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=thi_doneText_2
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=8
+[0x000422F4]
+handle=364
+locked=0
+resize=
+code=
+type=label
+x=203
+y=77
+width=158
+height=32
+text=18
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTERIMAGE
+exstyle=
+textcolour=0x0063B1
+bgcolour=0xFFFFFF
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=thi_doneText_1
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=9
+#ce

@@ -1,0 +1,478 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+
+Global $GUI_Main = GUICreate("OPA1 License",706,504,-1,-1,BitOr($WS_POPUP,$WS_BORDER),-1)
+GUISetBkColor(0xFFFFFF,$GUI_Main)
+GUICtrlCreateLabel("",0,0,713,103,-1,$GUI_WS_EX_PARENTDRAG)
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("",0,103,200,409,-1,-1)
+GUICtrlSetState(-1,BitOr($GUI_SHOW,$GUI_DISABLE))
+GUICtrlSetBkColor(-1,"0xDADADA")
+GUICtrlCreateLabel("OPA1 License",198,9,388,65,-1,-1)
+GUICtrlSetFont(-1,30,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("Phần mềm hỗ trợ thi bằng lái A1",198,60,388,40,-1,-1)
+GUICtrlSetFont(-1,16,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+Global $myGUI_logo = GUICtrlCreatePic("",15,0,160,160,-1,-1)
+GUICtrlCreateLabel("",0,474,713,30,-1,-1)
+GUICtrlSetState(-1,BitOr($GUI_SHOW,$GUI_DISABLE))
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $main_Textname = GUICtrlCreateLabel("Chào Nam,",0,153,198,36,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetFont(-1,16,700,0,"Segoe UI")
+GUICtrlSetBkColor(-1,"-2")
+Global $myButton_exit = GUICtrlCreateLabel("❎ Thoát",630,480,57,17,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Exit")
+GUICtrlSetFont(-1,10,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlSetCursor(-1,0)
+Global $main_Textprocess = GUICtrlCreateLabel("Tiến trình học:	45/150"&@crlf&"Tiến trình ôn tập:	78%"&@crlf&"Số lần thi thử:	7"&@crlf&"Số lần đậu:	5"&@crlf&"Dự đoán tỉ lệ đậu:	50%",12,257,184,105,-1,-1)
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("Đánh giá quá trình học",1,231,198,26,$SS_CENTER,-1)
+GUICtrlSetFont(-1,11,600,0,"Segoe UI Semibold")
+GUICtrlSetBkColor(-1,"-2")
+Global $myButton_edit = GUICtrlCreateLabel("ĐỔI TÊN",70,190,55,22,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Input_ChangeName")
+GUICtrlSetFont(-1,8,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $myButton_reset = GUICtrlCreateLabel("🔁 RESET",70,365,55,22,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Reset_Process")
+GUICtrlSetFont(-1,8,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+Global $myButton_help = GUICtrlCreateLabel("🚩Hướng dẫn",107,480,81,17,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_File_Help")
+GUICtrlSetFont(-1,10,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlSetCursor(-1,0)
+Global $myButton_info = GUICtrlCreateLabel("🚀 Thông tin",19,480,81,17,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_About_ShowGUI")
+GUICtrlSetFont(-1,10,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlSetCursor(-1,0)
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=OPA1 License
+breite=706
+hoehe=504
+style=$WS_POPUP+$WS_BORDER
+exstyle=-1
+bgcolour=0xFFFFFF
+bgimage=none
+handle=GUI_Main
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x00101764]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=0
+y=0
+width=713
+height=103
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=$GUI_WS_EX_PARENTDRAG
+textcolour=0x000000
+bgcolour=0x0063B1
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+order=0
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A180A]
+handle=357
+locked=0
+resize=
+code=
+type=label
+x=0
+y=103
+width=200
+height=409
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_DISABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=0xDADADA
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+order=1
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A1806]
+handle=358
+locked=0
+resize=
+code=
+type=image
+x=15
+y=0
+width=160
+height=160
+tooltip=
+text=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=myGUI_logo
+func=
+bgimage=
+order=4
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A1802]
+handle=359
+locked=0
+resize=
+code=
+type=label
+x=198
+y=9
+width=388
+height=65
+text=OPA1 License
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semibold
+fontsize=30
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+order=2
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A17FE]
+handle=360
+locked=0
+resize=
+code=
+type=label
+x=198
+y=60
+width=388
+height=40
+text=Phần mềm hỗ trợ thi bằng lái A1
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semibold
+fontsize=16
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=3
+[0x000A17F8]
+handle=361
+locked=0
+resize=
+code=
+type=label
+x=0
+y=474
+width=713
+height=30
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_DISABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=0x0063B1
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=7
+[0x000D185C]
+handle=362
+locked=0
+resize=
+code=GUICtrlSetCursor(-1,0)
+type=label
+x=630
+y=480
+width=57
+height=17
+text=❎ Thoát
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=10
+fontstyle=400
+fontattribute=0
+id=myButton_exit
+func=_Exit
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=8
+[0x000D1858]
+handle=363
+locked=0
+resize=
+code=
+type=label
+x=0
+y=153
+width=198
+height=36
+text=Chào Nam,
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0x000000
+bgcolour=-2
+font=Segoe UI
+fontsize=16
+fontstyle=700
+fontattribute=0
+id=main_Textname
+func=
+bgimage=
+order=8
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A1844]
+handle=364
+locked=0
+resize=
+code=
+type=label
+x=12
+y=257
+width=184
+height=105
+text=Tiến trình học:	45/150[BREAK]Tiến trình ôn tập:	78%[BREAK]Số lần thi thử:	7[BREAK]Số lần đậu:	5[BREAK]Dự đoán tỉ lệ đậu:	50%
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=main_Textprocess
+func=
+bgimage=
+order=9
+tabpage=-1
+iconindex=
+textmode=text
+[0x000A1840]
+handle=365
+locked=0
+resize=
+code=
+type=label
+x=1
+y=231
+width=198
+height=26
+text=Đánh giá quá trình học
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER
+exstyle=
+textcolour=0x000000
+bgcolour=-2
+font=Segoe UI Semibold
+fontsize=11
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=10
+[0x000A1838]
+handle=366
+locked=0
+resize=
+code=
+type=label
+x=70
+y=190
+width=55
+height=22
+text=ĐỔI TÊN
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semibold
+fontsize=8
+fontstyle=600
+fontattribute=0
+id=myButton_edit
+func=_Input_ChangeName
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=11
+[0x000A1834]
+handle=367
+locked=0
+resize=
+code=
+type=label
+x=70
+y=365
+width=55
+height=22
+text=🔁 RESET
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semibold
+fontsize=8
+fontstyle=600
+fontattribute=0
+id=myButton_reset
+func=_Reset_Process
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=12
+[0x00181A22]
+handle=368
+locked=0
+resize=
+code=GUICtrlSetCursor(-1,0)
+type=label
+x=107
+y=480
+width=81
+height=17
+text=🚩Hướng dẫn
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=10
+fontstyle=400
+fontattribute=0
+id=myButton_help
+func=_File_Help
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=17
+[0x00131930]
+handle=369
+locked=0
+resize=
+code=GUICtrlSetCursor(-1,0)
+type=label
+x=19
+y=480
+width=81
+height=17
+text=🚀 Thông tin
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=10
+fontstyle=400
+fontattribute=0
+id=myButton_info
+func=_About_ShowGUI
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=18
+#ce

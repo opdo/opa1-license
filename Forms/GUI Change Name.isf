@@ -1,0 +1,227 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+#include <EditConstants.au3>
+
+Global $GUI_Change_Name = GUICreate("Đổi tên",360,205,-1,-1,$WS_POPUP,BitOr($WS_EX_TOPMOST,$WS_EX_TOOLWINDOW))
+GUISetBkColor(0x0063B1,$GUI_Change_Name)
+Global $name_close = GUICtrlCreateLabel("Đóng",194,162,79,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Change_Name_Close")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("Đổi tên của bạn",20,20,331,34,-1,-1)
+GUICtrlSetFont(-1,16,300,0,"Segoe UI Light")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("Xin chào, mình là OPA1 Lincese - người sẽ hỗ trợ bạn học thi bằng lái A1 ^^. Tên bạn là gì?",21,57,331,34,-1,-1)
+GUICtrlSetFont(-1,10,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+Global $name_input = GUICtrlCreateInput("",21,117,328,26,-1,0)
+GUICtrlSetFont(-1,14,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("",21,150,331,1,-1,-1)
+GUICtrlSetFont(-1,10,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0xFFFFFF")
+Global $name_ok = GUICtrlCreateLabel("Đồng ý",273,162,79,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_Change_Name")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=Đổi tên
+breite=360
+hoehe=205
+style=$WS_POPUP
+exstyle=$WS_EX_TOPMOST+$WS_EX_TOOLWINDOW
+bgcolour=0x0063B1
+bgimage=none
+handle=GUI_Change_Name
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x001E2BC6]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=273
+y=162
+width=79
+height=34
+text=Đồng ý
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=name_ok
+func=_Change_Name
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=10
+[0x000A2A34]
+handle=357
+locked=0
+resize=
+code=
+type=label
+x=194
+y=162
+width=79
+height=34
+text=Đóng
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=name_close
+func=_Change_Name_Close
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=2
+[0x001D2A22]
+handle=358
+locked=0
+resize=
+code=
+type=label
+x=20
+y=20
+width=331
+height=34
+text=Đổi tên của bạn
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Light
+fontsize=16
+fontstyle=300
+fontattribute=0
+id=
+func=
+bgimage=
+order=3
+tabpage=-1
+iconindex=
+textmode=text
+[0x000F2A44]
+handle=359
+locked=0
+resize=
+code=
+type=label
+x=21
+y=57
+width=331
+height=34
+text=Xin chào, mình là OPA1 Lincese - người sẽ hỗ trợ bạn học thi bằng lái A1 ^^. Tên bạn là gì?
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semilight
+fontsize=10
+fontstyle=350
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=4
+[0x000829FC]
+handle=360
+locked=0
+resize=
+code=
+type=input
+x=21
+y=117
+width=328
+height=26
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=0
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI
+fontsize=14
+fontstyle=400
+fontattribute=0
+id=name_input
+func=
+bgimage=
+order=5
+tabpage=-1
+iconindex=
+textmode=text
+[0x000829F8]
+handle=361
+locked=0
+resize=
+code=
+type=label
+x=21
+y=150
+width=331
+height=1
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0xFFFFFF
+font=Segoe UI Semilight
+fontsize=10
+fontstyle=350
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=6
+#ce

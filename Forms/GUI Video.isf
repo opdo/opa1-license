@@ -1,0 +1,192 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+
+Global $GUI_Video = GUICreate("Video thực hành",800,620,-1,-1,BitOr($WS_POPUP,$WS_BORDER),-1)
+GUISetBkColor(0xFFFFFF,$GUI_Video)
+GUICtrlCreateLabel("",0,0,807,85,-1,$GUI_WS_EX_PARENTDRAG)
+GUICtrlSetBkColor(-1,"0x0063B1")
+GUICtrlCreateLabel("Video thực hành",40,10,442,56,-1,-1)
+GUICtrlSetFont(-1,22,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("Video mô phỏng thi thực hành bằng lái A1",40,54,442,21,-1,-1)
+GUICtrlSetFont(-1,11,400,0,"Segoe UI")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"-2")
+GUICtrlCreateLabel("",0,519,801,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetState(-1,BitOr($GUI_SHOW,$GUI_DISABLE))
+GUICtrlSetFont(-1,15,600,0,"Segoe UI Semibold")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0xC0C0C0")
+Global $videoButton_exit = GUICtrlCreateLabel("Đóng",367,519,99,34,BitOr($SS_CENTER,$SS_CENTERIMAGE),-1)
+GUICtrlSetOnEvent(-1,"_HideGUI_Video")
+GUICtrlSetFont(-1,12,350,0,"Segoe UI Semilight")
+GUICtrlSetColor(-1,"0xFFFFFF")
+GUICtrlSetBkColor(-1,"0x0063B1")
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=Video thực hành
+breite=800
+hoehe=620
+style=$WS_POPUP+$WS_BORDER
+exstyle=-1
+bgcolour=0xFFFFFF
+bgimage=none
+handle=GUI_Video
+parent=
+code=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+const_modus=default
+[0x000625CE]
+handle=356
+locked=0
+resize=
+code=
+type=label
+x=0
+y=0
+width=807
+height=85
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=$GUI_WS_EX_PARENTDRAG
+textcolour=0x000000
+bgcolour=0x0063B1
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+order=0
+tabpage=-1
+iconindex=
+textmode=text
+[0x000525D2]
+handle=357
+locked=0
+resize=
+code=
+type=label
+x=40
+y=10
+width=442
+height=56
+text=Video thực hành
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI Semibold
+fontsize=22
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+order=2
+tabpage=-1
+iconindex=
+textmode=text
+[0x000525D8]
+handle=358
+locked=0
+resize=
+code=
+type=label
+x=40
+y=54
+width=442
+height=21
+text=Video mô phỏng thi thực hành bằng lái A1
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=-2
+font=Segoe UI
+fontsize=11
+fontstyle=400
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=3
+[0x000525E0]
+handle=360
+locked=0
+resize=
+code=
+type=label
+x=0
+y=519
+width=801
+height=34
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_DISABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0xC0C0C0
+font=Segoe UI Semibold
+fontsize=15
+fontstyle=600
+fontattribute=0
+id=
+func=
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=7
+[0x000425E6]
+handle=361
+locked=0
+resize=
+code=
+type=label
+x=367
+y=519
+width=99
+height=34
+text=Đóng
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$SS_CENTER+$SS_CENTERIMAGE
+exstyle=
+textcolour=0xFFFFFF
+bgcolour=0x0063B1
+font=Segoe UI Semilight
+fontsize=12
+fontstyle=350
+fontattribute=0
+id=videoButton_exit
+func=_HideGUI_Video
+bgimage=
+tabpage=-1
+iconindex=
+textmode=text
+order=16
+#ce
